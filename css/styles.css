@@ -22,4 +22,33 @@ body {
     background-color: unset!important;
 }
 
-.btnNav
+.portadaMain{
+    /* Si bien no es buena practica usar  estas paths, tengo que hacerlo así si no en la entrega no lo van a pdoer ver bien. en teoria aca se usa una path 
+    absoluta? Me queda la duda, para preguntar en alguna clase!. Nuevamente en esta entrega jaja*/
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.014), rgba(0, 0, 0, 0.801)),url("./../assets/img/Home_Virtus.jpg");
+    background-position: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 75vh;
+}
+
+.btnVw{
+    /* esta clase va encima de el boton de rapstrap para que el boton de vw quede bien cuadradito como en mi pre entrega!!!*/
+    border-radius: 0;
+    border: 2px, solid, white;
+    background-color: #001e50;
+}
+
+.btnVw:hover{
+    /* mismo que recien pero para hover!!!*/
+    border-radius: 0;
+    border: 2px, solid, #001e50;
+    color: #001e50;;
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.imgSns{
+    width: 2em;
+}
