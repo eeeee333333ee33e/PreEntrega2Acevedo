@@ -1,0 +1,111 @@
+body {
+    @include font-family($font-family);
+  }
+  
+  .headerMain {
+    @include background($color-background-main);
+  }
+  
+  .blanco {
+    color: $color-white;
+  }
+  
+  .celeste {
+    color: $color-celeste;
+  }
+  
+  .nd {
+    text-decoration: none;
+  }
+  
+  .btnNav {
+    background-color: unset !important;
+  }
+  
+  .portadaMain {
+    @include gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.601));
+    background-image: url("../assets/img/Home_Virtus.jpg"), linear-gradient(to bottom, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.601));
+    background-position: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 75vh;
+  }
+  
+  .btnVw {
+    border-radius: 0;
+    @include border(2px, solid, $color-white);
+    @include background($color-background-main);
+  
+    &:hover {
+      @include border(2px, solid, $color-background-main);
+      color: $color-background-main;
+      @include background($color-white);
+      transform: scale(1.1);
+    }
+  }
+  
+  .imgSns {
+    @include size(2em);
+  }
+  
+  .headingVehicle {
+    font-size: 1.8em;
+  }
+  
+  .headingVehicleSmall {
+    font-size: 1.1em;
+  }
+  
+  .imgService {
+    @include size(30vh);
+  }
+  
+  .listVehicle {
+    font-size: 0.9em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  
+  .imgVehiculo {
+    @include size(25vw);
+  }
+  
+  .sombraInt {
+    position: relative;
+    overflow: hidden;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include size(100%, 100%);
+      @include gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0), to top right);
+      pointer-events: none;
+      z-index: 1;
+    }
+  
+    * {
+      position: relative;
+      z-index: 2;
+      transition: opacity 0.3s ease;
+    }
+  
+    &:hover {
+      &::before,
+      * {
+        opacity: 0;
+      }
+    }
+  }
+  
+  .imgLogo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .marcoMapa {
+    width: 300px;
+    height: 210px;
+  }
